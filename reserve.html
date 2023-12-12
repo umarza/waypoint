@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Waypoint Haves - BOOKINGS</title>
+        <link rel="stylesheet" href="css files/styless.css">
+        <link rel="icon" href="images/weblogo.webp">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <meta name="description" content="This is a website about Waypoint Hotel">
+        <link href="https://api.fontshare.com/v2/css?f[]=chillax@500&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f[]=author@500&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f[]=author@301&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f[]=switzer@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <script src="css files/main.js" defer></script>
+    </head>
+    <body>
+        <header class="booking_header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a class="fadeIn" href="index.html">
+                        <img src="images/WAYPOINT ORI LOGO.png" alt="logo">
+                </div>
+                <div class="navigation">
+
+                    <div class="navlinks">
+                        <a class="navlink" href="index.html">Home</a>
+                        <a class="navlink" href="resturants.html">Resturants</a>
+                        <a class="navlink" href="branches.html">Branches</a>
+                        <a class="navlink" href="adventures.html">Adventures</a>
+                        <a class="navlink booking_home" href="reserve.html">Book Now</a>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <section class="booking_head">    
+        <div class="booking_title ">
+            <h1>BOOKING</h1>
+        </div>
+        
+        <section class="section_book fadeIn">
+            <form class="form" id="bookingForm">
+            <div class="formRow">         
+                    <!-- Personal Details -->
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <div class="input-box">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="enter your first name" id="fName" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" placeholder="enter your last name" id="lName" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">E-Mail</span>
+                        <input type="text" placeholder="enter your email address" id="eMail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="number" placeholder="enter your phone number" id="phoneNumber" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Country</span>
+                        <input type="text" placeholder="enter your country" id="Country" required>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="formRow">
+                <!-- Adventure Details -->
+                <fieldset>
+                    <legend>Adventure Details</legend>
+
+                    <div class="input-box">
+                        <span class="details">Adventures</span>
+                        <select class="dropDown" id="AdvdropDown" name="List" size="1">
+                            <option value="None" id="advNone">None</option>
+                            <option value="SCUBA DIVING ADVENTURES" id="advScu">Scuba Diving</option>>
+                            <option value="WATER SPORTS ADVENTURES" id="advWat">Water Sport Adventures</option>
+                            <option value="MOUNTAIN BIKING" id="advmoto">Mountain biking</option>
+                            <option value="Hiking and Trekking" id="advhik">Hiking and Trekking</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Local Adults</span>
+                        <input type="number" id="localAdults"  placeholder="No. of Local Adults" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Local Children</span>
+                        <input type="number" id="localchildren"  placeholder="No. of Local Children" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Foreign Adults</span>
+                        <input type="number" id="foreignadults"  placeholder="No. of Foreign Adults" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Foreign Children</span>
+                        <input type="number" id="foreignchildren"  placeholder="No. of Foreign Children" required>
+                    </div>
+
+                    <div class="input-box-3">
+                        <span class="details">Guide for Diving</span>
+
+                        <div class="dive-adult">
+                            <label>
+                                <input type="checkbox" id="diveAdults">
+                                <span>Adults</span>
+                            </label>
+                        </div>
+                        
+                        <div class="dive-kids">
+                            <label>
+                                <input type="checkbox" id="diveChildren">
+                                <span>Children</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-box price">
+                        <p id="advPrice">LKR 00.00</p>
+                    </div>
+                    <div class="bookingBtn">
+                        <button class="button" type="button" id="add2favAdv">Add to Favorites</button>
+                        <button class="button" type="button" id="book_adv_btn">Book Now</button>
+                    </div>
+
+                </fieldset>
+            </div>
+            <div class="formRow">
+                <fieldset>
+
+
+                    <!-- Booking Details -->
+                    <legend>Booking details</legend>
+                    <div class="input-box">
+                        <span class="details">Check-In Date</span>
+                        <input type="date" required id="checkIn">
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Check-Out Date</span>
+                        <input type="date" required id="checkOut">
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Adults</span>
+                        <input type="number" placeholder="No. of Adults" required id="adults">
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Children</span>
+                        <input type="number" placeholder="No. of Children" required id="children">
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Children Above 5</span>
+                        <input type="number" placeholder="No. of Children above 5" required id="kidsAbove5">
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Rooms - Single Room</span>
+                        <input type="number" placeholder="Single" required id="singleRoom">
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Rooms - Double Room</span>
+                        <input type="number" placeholder="Double" required id="doubleRoom">
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Rooms - Triple Room</span>
+                        <input type="number" placeholder="Triple" required id="tripleRoom">
+                    </div>
+
+                    <div class="input-box-4">
+                        <span class="details">Extra Add-Ons</span>
+
+                        <div class="addonscheck">
+                            <label>
+                                <input type="checkbox" id="wifi">
+                                <span>WIFI</span>
+                            </label>
+                        </div>
+                        <div class="addonscheck">
+                            <label>
+                                <input type="checkbox" id="pool">
+                                <span>POOL</span>
+                            </label>
+                        </div>
+                        <div class="addonscheck">
+                            <label>
+                                <input type="checkbox" id="golf">
+                                <span>GOLF</span>
+                            </label>
+                        </div>
+                        <div class="addonscheck">
+                            <label>
+                                <input type="checkbox" id="extrabed">
+                                <span>EXTRA BED</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="promo">Enter Promo Code</span>
+                        <input type="text" id="promocode">
+                    </div>
+                    <div class="input-box price">
+                        <p id="roomPrice">LKR 00.00</p>
+                    </div>
+                    <div class="input-box price">
+                        <span class="promo">Loyalty Points</span>
+                        <p id="loyaltyField">0 Points</p>
+                    </div>
+                    <div class="bookingBtn">
+                        <button class="button" type="button" id="add2favRoom">Add to Favorites</button>
+                        <button class="button" type="button" id="checkLoyalty">Check Loyalty</button>
+                        <button class="button" type="button" id="bookNow">Book Now</button>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+        </section>
+    </section>
+
+    <section class="table-customer">
+        <h2>Reservation</h2>
+            <table class="table overallTable">
+                <thead id="booklist">
+                    <tr>
+                        <td>Name</td>
+                        <td>Check-In</td>
+                        <td>Check-Out</td>
+                        <td>Single Room</td>
+                        <td>Double Rooms</td>
+                        <td>Triple Rooms</td>
+                        <td>WI-FI</td>
+                        <td>Extra Bed</td>
+                        <td>Pool View</td>
+                        <td>Total Cost</td>
+                    </tr>
+                </thead>
+                <tbody id="booktable">
+                </tbody>
+            </table>     
+    </section>
+
+    <section class="table-customer">
+        <div>Adventure Booking</div>
+            <table class="table overallTable">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Adventure</td>
+                        <td>Local Adults</td>
+                        <td>Local Kids</td>
+                        <td>Foreign Adults</td>
+                        <td>Foreign Kids</td>
+                        <td>Guide for Diving(Adults)</td>
+                        <td>Guide for Diving(Kids)</td>
+                        <td>Total Cost</td>
+                    </tr>
+                </thead>
+                <tbody id="advbooktable">
+                </tbody>
+            </table>     
+    </section>
+        
+        <div class="footer">
+            <footer>
+                <div class="social">
+                    <a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a>
+                    <a href=""><i class="icon ion-social-snapchat"></i></a>
+                    <a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
+                    <a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a>
+                </div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="index.html">Home</a></li>
+                    <li class="list-inline-item"><a href="resturants.html">Resturants</a></li>
+                    <li class="list-inline-item"><a href="branches.html">Branches</a></li>
+                    <li class="list-inline-item"><a href="adventures.html">Adventures</a></li>
+                    <li class="list-inline-item"><a href="reserve.html">Book Now</a></li>
+                </ul>
+                <p class="copyright">Waypoint Haves © 1980</p>
+            </footer>
+        </div>
+    </body>
+</html>    
+
+
+
+
